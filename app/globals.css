@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Condensed:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --color-brand: #1959AC;
+  --color-brand-dark: #0546D2;
+  --color-copy: #222222;
+}
+
+/* Body */
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: var(--color-copy);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings helper */
+.h1-design {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-copy);
+}
+
+/* Hero clip path diagonal (tweak for pixel-perfect) */
+.hero-diagonal {
+  clip-path: polygon(0 0, 68% 0, 100% 100%, 0% 100%);
+}
+
+/* Button brand */
+.btn-brand {
+  background: var(--color-brand);
+  color: #fff;
+}
+.btn-brand:hover {
+  background: var(--color-brand-dark);
+}
+
+/* subtle wave bg */
+.bg-wave {
+  position: absolute;
+  inset: -10% 0 auto 0;
+  pointer-events: none;
+  opacity: 0.06;
+}

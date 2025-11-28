@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const services = [
@@ -23,16 +23,16 @@ export default function Services() {
   return (
     <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <motion.h2
+        {/* Fix motion typing by using motion.div as HTMLMotionProps */}
+        <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-3xl font-bold mb-8"
         >
           What We Do
-        </motion.h2>
+        </motion.div>
 
-        {/* FIX: motion.div, not motion */}
         <motion.div
           variants={container}
           initial="hidden"
@@ -64,4 +64,3 @@ export default function Services() {
     </section>
   );
 }
-
